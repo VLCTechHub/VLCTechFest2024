@@ -6,23 +6,21 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: VLCTechFest 2024
+title: VLCTechFest 2025
 email: hola@vlctechfest.org
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://vlctechfest.org # the base hostname & protocol for your site
 description:
-  es: 8 de junio de 2024. Evento gratuito y abierto a todo el mundo que reúne a las comunidades tecnológicas de la Comunidad Valenciana.
-  en: June 8th, 2024. Free and open event for everyone to bring together the technical communities of Valencian Community.
-  ca: 8 de juny de 2024. Esdeveniment gratuït i obert a tothom que reuneix les comunitats tecnològiques de la Comunitat Valenciana.
+  es: 14 de junio de 2025. Evento gratuito y abierto a todo el mundo que reúne a las comunidades tecnológicas de la Comunidad Valenciana.
+  en: June 14th, 2025. Free and open event for everyone to bring together the technical communities of Valencian Community.
+  ca: 14 de juny de 2025. Esdeveniment gratuït i obert a tothom que reuneix les comunitats tecnològiques de la Comunitat Valenciana.
 share_image:
-  es: vlctechfest2024_es.png
-  en: vlctechfest2024_en.png
-  ca: vlctechfest2024_ca.png
+  es: C4PNewDate_es.png
+  en: C4PNewDate_en.png
+  ca: C4PNewDate_ca.png
 fest:
-  twitter_username: vlctechfest
   youtube_url: https://www.youtube.com/channel/UCS7z_DqAOTqwANFvmKmM5ig
 hub:
-  twitter_username: vlctechhub
   github_username: vlctechhub
   web_url: https://vlctechhub.org/
   web_title: vlctechhub.org
@@ -38,14 +36,16 @@ path:
   community_images: /images/communities/
 navigation:
   - about
-  # - cfp
-  - agenda
-  - workshops
-  - speakers
+  - cfp
+  # - agenda
+  # - workshops
+  # - speakers
   - coc
+  - principles
   - faq
   - location
-  - sponsors
+  # - sponsors
+  - communities
 locale:
   es: es_ES
   en: en_US

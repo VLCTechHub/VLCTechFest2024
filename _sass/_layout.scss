@@ -272,6 +272,10 @@ footer a:hover {
   @extend .section-white;
 }
 
+#principles {
+  @extend .section-white;
+}
+
 #sessions {
   @extend .section-pink;
 }
@@ -305,11 +309,11 @@ footer a:hover {
 }
 
 #location {
-  @extend .section-blue;
+  @extend .section-navy;
 }
 
 #faq {
-  @extend .section-navy;
+  @extend .section-purple;
 }
 
 #companies {
@@ -570,6 +574,10 @@ body {
   --secondaryColor: var(--blue);
   --secondaryTextColor: var(--white);
 }
+.section-pink a:not(.button) {
+  color: var(--white);
+  font-weight: 400;
+}
 
 .section-main {
   padding-top: 0;
@@ -624,8 +632,7 @@ section {
   }
   .wrapper > p,
   article > p {
-    max-width: 40em;
-    padding-right: 1.5em;
+    
     &:last-child {
       padding-right: 0;
     }
@@ -1140,17 +1147,19 @@ ul.speakers {
 }
 
 .col-2 {
-  column-count: 2;
-  column-gap: 3em;
-  column-fill: auto;
   h1 {
     display: table;
     column-span: all;
     margin-bottom: 1.25em;
   }
-  article {
+  div {
     padding: 1.25em 0;
     break-inside: avoid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+
+    
     h2 {
       font-size: 1.2em;
       font-weight: bolder;
@@ -1158,11 +1167,11 @@ ul.speakers {
       margin-bottom: 15px;
     }
   }
-  @include media-query($on-palm) {
-    column-count: 1;
-    article {
+  @include media-query($on-laptop) {
+    div {
       margin-bottom: 0;
       padding: 0;
+      grid-template-columns: 1fr;
     }
   }
 }
@@ -1191,3 +1200,41 @@ ul.speakers {
 //     background-color: inherit;
 //     border-bottom: 10px dashed;
 // }
+
+// Principles section
+
+$card-shadow: 0 6px 10px rgba(0, 0, 0, 0.125);
+
+.principles {
+  .wrapper {
+    .principlesGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+
+      @include media-query($on-laptop) {
+        grid-template-columns: 1fr;
+      }
+    }
+    article {
+      box-shadow: $card-shadow;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #f8f8f8;
+
+      h2 {
+        margin: 0;
+        padding: 20px;
+        background-color: var(--purple);
+        color: var(--white);
+        font-weight: 700;
+        min-height: 60px;
+      }
+      p {
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+      }
+    }
+  }
+}
